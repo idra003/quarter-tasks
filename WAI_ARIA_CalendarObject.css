@@ -1,0 +1,434 @@
+.EurolandTools-CommonObjects-Calendar-Button-HiddenButton,
+.EurolandTools-CommonObjects-Calendar-HiddenSelectionButton {
+	display: block;
+    width: 0px;
+    height: 0px;
+
+    overflow-x: hidden;
+    white-space: nowrap;
+
+    font-size: 0px;
+    
+    position: absolute;
+    top: auto;
+    left: auto;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+/************************************************ Month CSS */
+
+.EurolandTools-CommonObjects-Calendar-Month-Table {
+	width: 100%;
+	border-collapse: collapse;	
+}
+.EurolandTools-CommonObjects-Calendar-Month-Day {
+	text-align: center;
+	
+	padding: 0px;
+	text-shadow: 1px 1px 1px #ccc;
+	
+	height: 28px;
+	width: 14.28%;
+	
+	padding-right: 0px;	
+	padding-bottom: 5px;
+}
+.EurolandTools-CommonObjects-Calendar-Month-DayName {
+	text-align: center;
+	
+	padding: 0px 0px 5px 0px;
+	
+	color: #464646;
+	text-shadow: 1px 1px 1px #aaa;
+}
+.EurolandTools-CommonObjects-Calendar-Month-DayName-Weekend {
+	color: #ed1c24;
+}
+.EurolandTools-CommonObjects-Calendar-Month-Weekend {
+	color: #ed1c24;
+}
+.EurolandTools-CommonObjects-Calendar-Month-NotActive {
+	color: #959595;
+	text-shadow: 1px 1px 1px #ddd;
+}
+.EurolandTools-CommonObjects-Calendar-Month-WeekendNotActive {
+	color: #ed7c80;
+}
+.EurolandTools-CommonObjects-Calendar-Month-Today {		
+	
+	
+}
+.EurolandTools-CommonObjects-Calendar-Month-Today .EurolandTools-CommonObjects-Calendar-Button-VisualButton {
+	border-color: #ed1c24;	
+	
+}
+.EurolandTools-CommonObjects-Calendar-Month-DayButton {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	width: 26px;
+	height: 26px;
+	
+	margin-right: 0px;
+	
+	border-radius: 13px;
+	text-align:  center;
+	line-height: 26px;
+	border: 1px solid #fff;
+	
+	transition: background 0.5s;
+}
+.EurolandTools-CommonObjects-Calendar-Month-DayButton:hover {
+	background: #d8d8d8;	
+	cursor: pointer;
+}
+.EurolandTools-CommonObjects-Calendar-Month-SelectedDay {
+	border: 1px solid #ccc;
+	background: #ccc;
+	/* border-radius: 0px; */
+}
+.EurolandTools-CommonObjects-Calendar-Calendar-MonthContainer {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+/************************************************ Other CSS */
+
+.EurolandTools-CommonObjects-Calendar-Calendar-CloseButtonContainer {
+	padding: 10px;
+}
+.EurolandTools-CommonObjects-Calendar-Calendar-CloseButton {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	width: 100%;	
+	padding: 5px 0px;
+	
+	border: 1px solid #464646;
+	background: #cb6b6e;
+	
+	
+	text-align: center;
+	
+	font-size: 15px;
+	line-height: 15px;
+	font-weight: bold;	
+	
+	color: #262626;
+	color: #fff;
+	
+	text-shadow: 0px 0px 1px #666;	
+	transition: background 1.0s, border 1.0s;
+}
+.EurolandTools-CommonObjects-Calendar-Calendar-CloseButton:hover {
+	background: #d2444a;
+}
+
+.EurolandTools-CommonObjects-Calendar-Selection {	
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;		
+}
+.EurolandTools-CommonObjects-Calendar-CalendarPositioner {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.EurolandTools-CommonObjects-Calendar-CalendarContainer {
+/*
+	This is a structural class, only 
+*/
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	min-width: 0px;
+	min-height: 0px;
+	
+	max-width: 320px;
+	
+	overflow: hidden;
+	
+	box-shadow: 3px 3px 5px #ccc;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	
+	cursor: default;
+	
+	z-index: 99999;
+}
+.EurolandTools-CommonObjects-Calendar-IntegratedCalendarContainer {
+	box-shadow: none;
+} 
+.EurolandTools-CommonObjects-Calendar-Calendar {
+	min-width: 300px;
+	min-height: 300px;
+		
+	background: rgba(255, 255, 255, 0.85);
+	background: #fff;
+	
+	border: 1px solid #252525;	
+}
+
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation {
+	background: #ccc;
+	background: rgba(225, 225, 225, 0.90);
+	width : 100%;
+	height: 100%;
+}
+
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-Navigation {
+	padding: 20px 20px 20px 20px;	
+}
+.EurolandTools-CommonObjects-Calendar-Calendar-ExtraNavigation-CurrentMonth {
+	text-align: center;
+	width: 100%;
+}
+.EurolandTools-CommonObjects-Calendar-Calendar-ExtraNavigation-PreviousButtons,
+.EurolandTools-CommonObjects-Calendar-Calendar-ExtraNavigation-NextButtons {
+	width: 0px;
+	white-space: nowrap;
+}
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-Button {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	padding: 10px;
+	margin: 3px;
+	
+	border: 1px solid #000;
+			
+	text-align: center;
+	
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: bold;	
+	
+	color: #464646;
+	
+	text-shadow: 1px 1px 1px #aaa;	
+	
+	transition: background 0.5s, border 0.5s;
+}
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-PeriodButton {
+	
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	margin: 3px;
+	text-align: center;
+	padding: 3px 0px;
+	
+	text-align: center;
+	width: 100%;
+		
+	border: 1px solid #a1a1a1;
+	border: 1px solid rgba(161,161,161,0);
+	
+	transition: background 0.5s, border 0.5s;
+}
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-PeriodButton-OutOfPeriod {
+	color: #636363;
+}
+
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-CurrentButton,
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-CloseButton {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	
+	transition: background 0.5s, border 0.5s;
+}
+
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-CurrentButton:hover,
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-Button:hover,
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-PeriodButton:hover {
+	background: #fff;
+	background: rgba(255,255,255,0.55);
+	border: 1px solid #636363;
+}
+
+.EurolandTools-CommonObjects-Calendar-NavigationPanel-Table {
+	width: 100%;
+	height: 100%;
+		
+	margin-top: 20px;
+}
+.EurolandTools-CommonObjects-Calendar-Calendar-ExtraNavigation-PeriodButtonContainer {
+	text-align: center;
+}
+
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-CloseButtonContainer {
+	text-align: center;
+	padding-top: 20px;
+}
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-CloseButton {
+	font-size: 15px;
+	line-height: 15px;
+	
+	background: #cd7073;
+	background: rgba(205,112,115,0.6);
+}
+
+.EurolandTools-CommonObjects-Calendar-ExtraNavigation-CloseButton:hover {
+	background: #ed1c24;
+	background: rgba(237,28,36,0.6);
+}
+.EurolandTools-CommonObjects-Calendar-Button-VisualButton {	
+	
+}
+.EurolandTools-CommonObjects-Calendar-Navigator-Button {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	padding: 5px;
+	margin: 3px;
+	
+	border: 1px solid #fff;
+			
+	text-align: center;
+	
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: bold;	
+	
+	color: #464646;
+	
+	text-shadow: 1px 1px 1px #aaa;	
+	
+	transition: background 0.5s, border 0.5s;
+}
+
+.EurolandTools-CommonObjects-Calendar-Calendar-Navigator-CurrentMonth {
+	color: #252525;
+}
+
+.EurolandTools-CommonObjects-Calendar-Navigator-MonthButton {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;	
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.EurolandTools-CommonObjects-Calendar-Navigator-Button:hover {
+	border: 1px solid #898989;
+	background: #c2c2c2;	
+}
+.EurolandTools-CommonObjects-Calendar-Button-VisualButton-Focus {
+	border: 1px solid #0072bc;
+	
+	transition: border 0s;
+	
+	box-shadow: 
+		#6e8fa5 2px 2px 2px
+		,#6e8fa5 2px -2px 2px		
+		,#6e8fa5 -2px -2px 2px
+		,#6e8fa5 -2px 2px 2px
+	;
+}
+
+.EurolandTools-CommonObjects-Calendar-Button-VisualButton-Disabled {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; 
+	filter: alpha(opacity=20);
+	
+	opacity: 0.2;
+}
+
+.EurolandTools-CommonObjects-Calendar-Calendar-NavigatorStructTable {
+	width: 100%;
+}
+.EurolandTools-CommonObjects-Calendar-Calendar-Navigator-PreviousButtons {
+	text-align: left;
+	white-space: nowrap;
+	width: 0px;
+}
+.EurolandTools-CommonObjects-Calendar-Calendar-Navigator-NextButtons {
+	text-align: right;
+	white-space: nowrap;
+	width: 0px;
+}
+
+.EurolandTools-CommonObjects-Calendar-Calendar-Navigator {
+	
+}
+
+.EurolandTools-CommonObjects-Calendar-Calendar-Month {
+	
+}
+
+.EurolandTools-CommonObjects-Calendar-CalendarIcon {
+	cursor: pointer;
+	margin: 3px 5px;
+	position: relative;
+	top: 5px;
+	
+	width: 16px;
+	height: 16px;
+	
+	background: url(./Images/WAI_ARIA_Calendar/cal.png) center center no-repeat;
+	
+	display: inline-block;
+	*zoom: 1.0;
+	*display: inline;
+}
+.EurolandTools-CommonObjects-Calendar-SelectionIndicator {
+	padding: 5px;
+	border: 1px solid #ccc;
+	
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;
+	
+	position: relative;
+	top: 0px;
+	left: 0px;
+	
+	min-width: 140px;
+	
+	cursor: pointer;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.EurolandTools-CommonObjects-Calendar-SelectionFocusIndicator {
+	position: absolute;
+	top: -4px;
+	left: -4px;
+		
+	width: 100%;
+	height: 100%;
+		
+	border: 4px solid #a8c1e4;
+	
+	
+	
+	box-shadow: 
+		#a8c1e4 2px 2px 2px
+		,#a8c1e4 2px -2px 2px		
+		,#a8c1e4 -2px -2px 2px
+		,#a8c1e4 -2px 2px 2px
+	;
+	
+	display: none;
+}
+

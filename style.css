@@ -1,0 +1,95 @@
+body {
+  font-family: Calibri, Arial;
+  font-size: 14px;
+}
+.tasks-table-container {
+  padding: 0.5em;
+}
+.tasks-table {
+  border: 0.08em solid #ccc;
+  border-collapse: collapse;
+  width: 100%;
+}
+.tasks-table td,
+.tasks-table th {
+  padding: 0.5em;
+  border: 0.08em solid #ccc;
+}
+
+.pop-up {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+.pop-up .content {
+  padding: 0.5em;
+  margin: 1em auto;
+  background: #fff;
+  max-width: 800px;
+}
+.pop-up .buttons {
+  text-align: right;
+}
+.pop-up h1 {
+  margin-bottom: 0;
+}
+.pop-up h2 {
+  margin-top: 0;
+}
+button {
+  padding: 0.5em 1em;
+  margin: 0.3em 0.3em 0.3em 0;
+  border-radius: 1em;
+  background: #82ca9c;
+  transition: background 0.5s;
+  border: 0px;
+  color: #fff;
+  text-shadow: 1px 1px #ccc;
+}
+button:hover {
+  background: #47ca77;
+}
+.task {
+  background: #7da7d9;
+  cursor: pointer;
+  transition: background 0.5s;
+
+  color: #fefefe;
+}
+.task:hover {
+  background: #4186d9;
+}
+textarea {
+  max-width: 690px;
+  width: 100%;
+  height: 130px;
+}
+.edit table {
+  max-width: 690px;
+  width: 100%;
+}
+th {
+  color: #333;
+}
+.close {
+  background: #ed1c24;
+}
+.close:hover {
+  background: #c90000;
+}
+.task-name {
+  display: block;
+  width: 0px;
+  min-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*
+.weeks th {
+  width: 7.6923%;
+}
+*/
