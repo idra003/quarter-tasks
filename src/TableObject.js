@@ -1,14 +1,40 @@
+/** Builds and displays the tables that holds the tasks
+ * @class 
+ */
 var TableObject = function() {
+  /** The reference to the "this" object
+   * @type {TableObject}
+   */
   var This = this;
 
+  /** The root element of the class
+   * @type {JQuery}
+   */
   This.$root = $("<div>");
+  /** The method that will be called when a task is clicked
+   * @type {function}
+   */
   This.onTaskClick = null;
 
+  /** The THEAD of the table
+   * @type {JQeury}
+   */
   var _$thead = $("<thead>");
+  /** The TBODY of the table
+   * @type {JQuery}
+   */
   var _$tbody = $("<tbody>");
-
+  /** Handles the saving and retriving of the task
+   * @type {TasksObject}
+   */
   var _Tasks = new TasksObject();
+  /** Handles the extra functions that are needed for the dates
+   * @type {DateObject}
+   */
   var _Dates = new DateObject();
+  /** An array with all the month names
+   * @type {string[]}
+   */
   var _monthNameArr = [
     "Jan",
     "Feb",
@@ -24,6 +50,9 @@ var TableObject = function() {
     "Dec"
   ];
 
+  /**
+   * The object initialization function
+   */
   function _init() {
     This.$root.addClass("tasks-table-contaier").append(
       $("<table>")
@@ -32,12 +61,16 @@ var TableObject = function() {
         .append(_$tbody)
     );
   }
-
+  /** Builds the tasks table based off the requested quarter
+   * @param {object} Quarter The quarter info of the quarter whom tasks table is needed
+   */
   This.make = function(Quarter) {
     buildTHead(Quarter);
     buildTBody(Quarter);
-  };
-
+  };  
+  /** Builds the body of the table i.e. populates the table with the tasks
+   * @param {object} Quarter The quarter info of the quarter whom tasks table is needed
+   */
   function buildTBody(Quarter) {
     var Data = _Tasks.getQuarterData(Quarter),
       index,
@@ -51,6 +84,10 @@ var TableObject = function() {
       _$tbody.append(buildTaskRow(item, Quarter));
     }
   }
+  /** Builds a single task row in the table
+   * @param {object} Task The task info of the task whom row will be build
+   * @param {object} Quarter The quarter info of the quarter whom tasks table is needed
+   */
   function buildTaskRow(Task, Quarter) {
     var $ret = $("<tr>"),
       $taskCell = $("<td>"),
@@ -98,11 +135,34 @@ var TableObject = function() {
         $("<span>")
           .addClass("task-name")
           .text(Task.title)
+      )
+      .append($('<div>').addClass('task-details')
+        .append($('<b>').text(Task.title).addClass('task-details-title'))
+        .append($('<div>').text(formatDate(Task.startDate) + ' - ' + formatDate(Task.endDate)).addClass('task-details-date'))
+        .append($('<div>').text(Task.details).addClass('task-details-details'))
       );
 
     return $ret;
   }
+  /** Formats a date object into a dd/MM/yyyy formated string
+   * @param {Date} date The date to be formated
+   */
+  function formatDate(date) {
+    var day = date.getDate(),
+      month = date.getMonth() + 1,
+      year = date.getFullYear();
 
+    return (
+      (day < 10 ? "0" + day : day) +
+      "/" +
+      (month < 10 ? "0" + month : month) +
+      "/" +
+      year
+    );
+  }
+  /** Builds the header of the table
+   * @param {object} Quarter The quarter info of the quarter whom tasks table is needed
+   */
   function buildTHead(Quarter) {
     var $firstMonthTH = $("<th>"),
       $secondMonthTH = $("<th>"),

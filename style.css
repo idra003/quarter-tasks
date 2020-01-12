@@ -58,6 +58,10 @@ button:hover {
   transition: background 0.5s;
 
   color: #fefefe;
+
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
 .task:hover {
   background: #4186d9;
@@ -93,3 +97,20 @@ th {
   width: 7.6923%;
 }
 */
+.task:hover .task-details {
+  display: block;
+  opacity: 1;
+}
+.task-details {
+  background: #4186d9;
+  position: absolute;
+  top: calc(100% + 5px);
+  padding: 0.5em;
+  left: 0;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+}
